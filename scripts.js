@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   //location data
-  $.getJSON("https://freegeoip.net/json/?callback=?", function(json) {
-    console.log(json);
+  $.getJSON('https://json.geoiplookup.io/?callback=?', function(json) {
+    console.log(JSON.stringify(json, null, 2));
     var city, country;
     var cityName = json.city;
     var countryName = json.country_name;

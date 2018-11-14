@@ -3,26 +3,26 @@ $(document).ready(function(){
   //location data
   $.getJSON('https://json.geoiplookup.io/?callback=?', function(json) {
     console.log(JSON.stringify(json, null, 2));
-    var city, country;
     var cityName = json.city;
-    var countryName = json.country_name;
     var countryCode = json.country_code;
     var long =json.longitude;
     var lata =json.latitude;
-    $("#city").html(cityName +"," + " " + countryCode);
+    $(".city").html(cityName +"," + " " + countryCode);
     $("#longitude").html(long);
     $("#latitude").html(lata);
     //weather data
     var weatherApi="https://api.darksky.net/forecast/828c0751c2c936d0ad20d8d3fb06dc53/" + lata + "," + long;
    $.getJSON(weatherApi + "?callback=?", function(data) {
+     console.log(weatherApi);
       //set tempC as current temperature. Use parseInt to remove float
      console.log (data);
    var tempF = parseInt((data.currently.temperature))+"&deg; F";
    var tempC = parseInt((parseInt(tempF) - 32) * (5/9))+ " &deg;C";
    var icon = data.currently.icon;
+   var description = data.minutely.summary;
+   $("#description").append(description);
    $("#temperatureF").html(tempF);
    $("#temperatureC").html(tempC);
-     console.log(tempC)
    
        //Set skycon color
  var skycons = new Skycons({"color": "pink"});

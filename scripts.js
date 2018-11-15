@@ -25,7 +25,7 @@ $(document).ready(function(){
    $("#temperatureC").html(tempC);
    
        //Set skycon color
- var skycons = new Skycons({"color": "pink"});
+ var skycons = new Skycons({"color": "#E1C340"});
      //sycons icon will match with icon from darksksy
      if (icon =="partly-cloudy-day"){
   var pcd = skycons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);

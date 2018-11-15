@@ -61,17 +61,20 @@ canvas {
 
 /* Trying to work through some accesibility with :focus */
 #circle:focus {
-  border-color:pink;
+  border-color:#E1C340;
   outline:none;
 }
 #circle:hover{
   cursor: pointer;
+  background-color:rgba(157, 194, 233, 0.817);
 }
 .city{
-  margin-top: -25%;
+  margin-top: -30%;
   display: flex;
   align-content: center;
   justify-content: center;
+  padding-left:5px;
+  padding-right: 5px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);

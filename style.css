@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(1vw + 1vh + .5vmin);
+  font-size: calc(1vw + 0.75vh + .10vmin);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
